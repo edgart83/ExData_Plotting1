@@ -7,7 +7,7 @@ rm(url,destfile)
 
 #read the file in to a dataframe
 hpc <- read.table("household_power_consumption.txt", header=TRUE,sep=";",stringsAsFactor=FALSE)
-#convert the date to one recognize by R
+#convert the Date to one recognize by R
 hpc$Date <- as.Date(hpc$Date,format="%d/%m/%Y")
 #Subset the dataframe to the needed information
 hpc <- subset(hpc,hpc$Date>="2007-02-01" & hpc$Date<="2007-02-02")
